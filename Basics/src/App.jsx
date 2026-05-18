@@ -6,6 +6,7 @@ import LearnState from './components/LearnState'
 import Counter from './components/Counter'
 import LearnUseEffect from './components/LearnUseEffect'
 import LearnUseMemo from './components/LearnUseMemo'
+import LearnForm from './components/LearnForm'
 
 function App() {
   
@@ -16,7 +17,8 @@ function App() {
      {/* <LearnState/> */}
      {/* <Counter/> */}
      {/* <LearnUseEffect /> */}
-     <LearnUseMemo/>
+     {/* <LearnUseMemo/> */}
+     <LearnForm />
     </>
   )
 }
