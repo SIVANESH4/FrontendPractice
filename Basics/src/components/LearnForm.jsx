@@ -12,6 +12,7 @@ const LearnForm = () => {
     e.preventDefault();
     console.log(formData);
   }
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
     <>
     <form action="" onSubmit={handleSubmit}>
@@ -19,8 +20,14 @@ const LearnForm = () => {
       <br />
       LastName: <input type='text' name='lastName' value={formData.lastName} onChange={handleData} />
       <br />
+      Login : <input type = 'button' value = {isLoggedIn ? "Logout" : "Login"} onClick = {()=>{
+        setIsLoggedIn(!isLoggedIn);
+      }} />
       <input type="submit"/>
     </form>
+    {
+      isLoggedIn ? <h1>Welcome!</h1> : <h1>who are you?</h1>
+    }
     </>
   )
 }
